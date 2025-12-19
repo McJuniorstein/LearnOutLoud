@@ -79,6 +79,12 @@ sed -e "s/{{title}}/$TITLE/" \
     -e "s/{{date}}/$TODAY/" \
     "$TEMPLATES_DIR/transcript.md" > "$POST_DIR/transcript.md"
 
+# post.yaml
+sed -e "s/{{slug}}/$SLUG/" \
+    -e "s/{{framework}}/$FRAMEWORK/" \
+    -e "s/{{date}}/$TODAY/" \
+    "$TEMPLATES_DIR/post.yaml" > "$POST_DIR/post.yaml"
+
 # Add to INDEX.md
 echo "| $SLUG | $TITLE | Requires Interview | $FRAMEWORK | | $TODAY |" >> "$INDEX_FILE"
 

@@ -1,0 +1,8 @@
+slug: {{slug}}
+status: requires_interview  # requires_interview | draft | gap_check_needed | researching | reviewed | published
+framework: {{framework}}
+created: {{date}}
+last_reviewed: null
+llm_used: null  # e.g., grok-4
+confidence: low  # low | medium | high
+compiler_version: null  # Hash of SYSTEM_COMPILER.md
