@@ -1,5 +1,24 @@
 #!/bin/bash
 # fact_check.sh — Guide manual fact-checking with primary-source suggestions
+
+# Check if draft exists and has content
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+REPO_ROOT="$(dirname "$SCRIPT_DIR")"
+ACTIVE_DIR="$REPO_ROOT/work/_active"
+
+if [ -f "$ACTIVE_DIR/draft.md" ]; then
+    DRAFT_LINES=$(wc -l < "$ACTIVE_DIR/draft.md")
+    if [ "$DRAFT_LINES" -lt 10 ]; then
+        echo "Note: Draft seems short ($DRAFT_LINES lines)—fact-check guide is most useful after building claims."
+        echo "Continuing anyway..."
+        echo ""
+    fi
+else
+    echo "Note: No active post or draft found. Activate a post first for best results."
+    echo "Continuing with general guidance..."
+    echo ""
+fi
+
 CLAIM="${1:-General claim}"
 echo "=== Manual Fact-Check Guidance for: $CLAIM ==="
 echo ""
