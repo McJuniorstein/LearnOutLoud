@@ -1,5 +1,11 @@
 # LearnOutLoud
 
+> **Work in Progress — Experimental Tool**
+>
+> This is my personal "thinking aloud" system, deliberately manual and CLI-heavy.
+> It's rough, opinionated, and not trying to be perfect. No guarantees—it works for me.
+> Use at your own risk. Issues, PRs, and brutal feedback very welcome.
+
 A local, Git-backed system that forces you to learn a topic deeply while you write about it.
 
 Force yourself to learn a subject deeply by trying to explain it.
@@ -85,5 +91,14 @@ Updated `gaps.md`.
 ---
 
 See `examples/completed-cte-example/` for what a finished post looks like.
+
+## Known Rough Spots (help welcome)
+
+- Workflow is manual by design: copy-paste prompt, multi-file editing, no automation.
+- CLI barrier: requires basic terminal comfort (running `./scripts/*`).
+- LLM session happens outside the repo—visibility via IDE monitoring.
+- No built-in publishing—just drafts.
+
+If these bite you, file an issue. Future iterations may add wrappers, but v1 keeps it raw.
 
 MIT Licensed — fork and evolve freely.
