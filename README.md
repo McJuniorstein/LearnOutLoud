@@ -33,4 +33,39 @@ Delete the post folder when done—no harm.
 - Manual fact-check guidance (primary sources + archives only)
 - Full history via Git
 
+## Example Session (CTE framework)
+
+After setup + activate, paste the entire `SYSTEM_COMPILER.md` into a new LLM chat. Then:
+
+**You:** Let's write about "Why remote work can fail"
+
+**LLM:** Got it. Framework: CTE (Claim-Tension-Examination).
+
+What's your core claim—why do you believe remote work can fail?
+
+**You:** I think remote work fails when companies don't adjust their management style. They keep expecting office behaviors in a non-office setting.
+
+**LLM:** Strong claim. I've added it to the Claim section:
+
+> Remote work fails when companies expect office behaviors without adjusting management style. [experience-based]
+
+Who disagrees with this? What's the tension?
+
+**You:** Managers who think "if I can't see you, you're not working." They believe presence equals productivity.
+
+**LLM:** Added to Tension. Now let me ask: what evidence supports your claim? Any specific failures you've seen?
+
+**You:** gap check
+
+**LLM:** Scanning draft... Found 3 gaps:
+- [experience-based] on main claim — could strengthen with external examples
+- [citation needed] on presence-equals-productivity belief
+- [counterpoint needed] — no opposing view yet
+
+Updated `gaps.md`.
+
+---
+
+See `examples/completed-cte-example/` for what a finished post looks like.
+
 MIT Licensed — fork and evolve freely.

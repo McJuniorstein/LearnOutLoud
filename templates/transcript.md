@@ -2,7 +2,7 @@
 
 **Post:** {{title}}
 **Started:** {{date}}
-**Compiler Hash:** [set via script]
+**Compiler Hash:** (run `./scripts/set_compiler_version.sh` — stored in post.yaml)
 
 ---
 
