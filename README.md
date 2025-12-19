@@ -17,6 +17,8 @@ Status: Experimental personal tool. Depends on pasting the system prompt into yo
 ```bash
 ./scripts/new_post.sh my-topic-slug [CTE|Minto|Dialectic|FieldNotes]
 ./scripts/activate_post.sh my-topic-slug
+./scripts/set_llm_used.sh grok-4           # Optional: track model for comparison
+./scripts/set_compiler_version.sh          # Optional: record compiler hash
 # → paste contents of SYSTEM_COMPILER.md into your AI chat
 ```
 
