@@ -9,6 +9,7 @@ INDEX_FILE="$WORK_DIR/INDEX.md"
 ACTIVE_LINK="$WORK_DIR/_active"
 
 echo "=== Post Inventory ==="
+echo "(Lists posts—for gap check, tell your LLM 'gap check' during session)"
 echo ""
 
 # Show active post
