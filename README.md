@@ -25,6 +25,24 @@ Status: Experimental personal tool. Depends on pasting the system prompt into yo
 **Test it:** Create a throwaway post, activate it, paste SYSTEM_COMPILER.md into your LLM, and say "hello".
 Delete the post folder when done—no harm.
 
+**Tip:** Open `work/_active/` in your editor while chatting—see the draft evolve live.
+
+## Monitoring Progress in Real-Time
+
+This system is deliberately file-based and multi-file—that's how it enforces structure and transparency.
+
+While chatting with your LLM:
+- Open the post folder in your IDE (VS Code, Vim, Sublime, etc.)
+- Or use the convenience symlink: open `work/_active/` (points to your current post)
+
+You'll see in near real-time:
+- `draft.md` — Your structured post building section by section
+- `transcript.md` — Full conversation history appending chronologically
+- `gaps.md` — Consolidated checklist of [citation needed], counterpoints, etc.
+- `post.yaml` — Metadata like status, framework, confidence
+
+No blind trust—watch the "compilation" happen as you talk. This visibility is the core of the learning loop: ignorance becomes explicit, progress becomes auditable.
+
 ## Features
 
 - Conversation-driven drafting
