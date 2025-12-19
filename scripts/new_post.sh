@@ -88,6 +88,7 @@ sed -e "s/{{slug}}/$SLUG/" \
 # Add to INDEX.md
 echo "| $SLUG | $TITLE | Requires Interview | $FRAMEWORK | | $TODAY |" >> "$INDEX_FILE"
 
-echo "Created: $POST_DIR"
+echo "Created post: $POST_DIR"
+echo "Slug for activation: $SLUG"
 echo ""
-echo "To activate: ./scripts/activate_post.sh $SLUG"
+echo "Next: ./scripts/activate_post.sh $SLUG"
