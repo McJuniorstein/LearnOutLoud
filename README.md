@@ -92,6 +92,12 @@ Updated `gaps.md`.
 
 See `examples/completed-cte-example/` for what a finished post looks like.
 
+## Windows Users
+
+Install [Git for Windows](https://git-scm.com/download/win) (includes Git Bash).
+In VS Code: Set terminal default to "Git Bash" (Ctrl+Shift+P → "Terminal: Select Default Profile").
+All scripts run normally. Open `work/_active/` in the editor for live monitoring.
+
 ## Known Rough Spots (help welcome)
 
 - Workflow is manual by design: copy-paste prompt, multi-file editing, no automation.
