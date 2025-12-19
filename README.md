@@ -22,20 +22,22 @@ This is **not** a publishing tool.
 ./scripts/activate_post.sh my-post-slug
 
 # Start a conversation with your LLM CLI
-# The system prompt is in prompts/SYSTEM_COMPILER.md
+# The system prompt is in SYSTEM_COMPILER.md
 ```
 
 ## Repository Structure
 
 ```
 LearnOutLoud/
-├── frameworks/         # Framework definitions
-├── prompts/            # LLM system prompts
+├── scripts/            # Workflow automation
 ├── templates/          # Blank templates for post files
+├── frameworks/         # Framework definitions
 ├── work/               # Active work (posts live here)
-│   ├── INDEX.md        # Inventory of all posts
-│   └── _active -> ...  # Symlink to current post
-└── scripts/            # Workflow automation
+│   └── INDEX.md        # Inventory of all posts
+├── LICENSE             # MIT License
+├── README.md
+├── SYSTEM_COMPILER.md  # LLM system prompt
+└── .gitignore
 ```
 
 ## Frameworks
