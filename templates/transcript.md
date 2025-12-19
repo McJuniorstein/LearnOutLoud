@@ -2,6 +2,7 @@
 
 **Post:** {{title}}
 **Started:** {{date}}
+**Compiler Hash:** [set via script]
 
 ---
 
