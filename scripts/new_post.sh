@@ -47,43 +47,29 @@ TITLE=$(echo "$SLUG" | sed 's/-/ /g' | awk '{for(i=1;i<=NF;i++) $i=toupper(subst
 # Copy and populate templates
 TODAY="$(date +%Y-%m-%d)"
 
-# meta.md
-sed -e "s/{{title}}/$TITLE/" \
-    -e "s/{{slug}}/$SLUG/" \
-    -e "s/{{date}}/$TODAY/" \
-    -e "s/{{framework}}/$FRAMEWORK/" \
-    "$TEMPLATES_DIR/meta.md" > "$POST_DIR/meta.md"
+# Validate framework exists
+if [ ! -d "$TEMPLATES_DIR/$FRAMEWORK" ]; then
+    echo "Error: Unknown framework '$FRAMEWORK'"
+    echo "Available: CTE, Minto, Dialectic, FieldNotes"
+    rmdir "$POST_DIR"
+    exit 1
+fi
 
-# draft.md
-sed -e "s/{{title}}/$TITLE/" \
-    -e "s/{{one_liner}}//" \
-    -e "s/{{framework}}/$FRAMEWORK/" \
-    "$TEMPLATES_DIR/draft.md" > "$POST_DIR/draft.md"
+# Copy shared templates
+cp "$TEMPLATES_DIR/shared/"* "$POST_DIR/"
 
-# gaps.md
-sed -e "s/{{title}}/$TITLE/" \
-    -e "s/{{date}}/$TODAY/" \
-    "$TEMPLATES_DIR/gaps.md" > "$POST_DIR/gaps.md"
+# Copy framework-specific draft.md
+cp "$TEMPLATES_DIR/$FRAMEWORK/draft.md" "$POST_DIR/draft.md"
 
-# research_plan.md
-sed -e "s/{{title}}/$TITLE/" \
-    -e "s/{{date}}/$TODAY/" \
-    "$TEMPLATES_DIR/research_plan.md" > "$POST_DIR/research_plan.md"
+# Copy post.yaml (manifest)
+cp "$TEMPLATES_DIR/post.yaml" "$POST_DIR/post.yaml"
 
-# sources.md
-sed -e "s/{{title}}/$TITLE/" \
-    "$TEMPLATES_DIR/sources.md" > "$POST_DIR/sources.md"
-
-# transcript.md
-sed -e "s/{{title}}/$TITLE/" \
-    -e "s/{{date}}/$TODAY/" \
-    "$TEMPLATES_DIR/transcript.md" > "$POST_DIR/transcript.md"
-
-# post.yaml
-sed -e "s/{{slug}}/$SLUG/" \
-    -e "s/{{framework}}/$FRAMEWORK/" \
-    -e "s/{{date}}/$TODAY/" \
-    "$TEMPLATES_DIR/post.yaml" > "$POST_DIR/post.yaml"
+# Populate placeholders in all files
+sed -i "s/{{title}}/$TITLE/g" "$POST_DIR"/*.md "$POST_DIR"/post.yaml
+sed -i "s/{{slug}}/$SLUG/g" "$POST_DIR"/post.yaml
+sed -i "s/{{date}}/$TODAY/g" "$POST_DIR"/*.md "$POST_DIR"/post.yaml
+sed -i "s/{{framework}}/$FRAMEWORK/g" "$POST_DIR"/*.md "$POST_DIR"/post.yaml
+sed -i "s/{{one_liner}}//g" "$POST_DIR"/*.md
 
 # Add to INDEX.md
 echo "| $SLUG | $TITLE | Requires Interview | $FRAMEWORK | | $TODAY |" >> "$INDEX_FILE"
