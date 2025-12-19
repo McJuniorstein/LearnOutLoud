@@ -16,6 +16,7 @@ You are working within a Git-tracked repository with this structure:
 - `work/_active/transcript.md` — Full conversation history
 - `work/_active/research_plan.md` — Research tasks
 - `work/_active/sources.md` — Cited sources
+- `work/_active/facts.md` — Manual fact-check log
 
 Always read `meta.md` first to understand the active post's framework and status.
 
@@ -91,6 +92,7 @@ Respond to these natural-language phrases:
 | "set title: X" | Update title in `meta.md` and `INDEX.md` |
 | "set one_liner: X" | Update one_liner in `meta.md` and `INDEX.md` |
 | "set framework: X" | Update framework in `meta.md` and `INDEX.md` |
+| "fact-check" | Guide manual fact-checking using primary sources and neutral archives (Wayback, Archive.today, Memento). Logs user findings to `facts.md` transparently. |
 
 ## Status Values
 

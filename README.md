@@ -1,86 +1,29 @@
 # LearnOutLoud
 
-A conversation-driven writing system for thought and commentary blogs.
+A local, Git-backed system that forces you to learn a topic deeply while you write about it.
 
-## What This Is
+Force yourself to learn a subject deeply by trying to explain it.
 
-A **thinking + drafting system** that:
-- Captures thinking via natural-language conversation
-- Organizes thoughts into structured drafts using explicit frameworks
-- Surfaces gaps, counterarguments, and research needs
-- Iterates via Git commits, not document chaos
+This is my personal learning rig. Rough, opinionated, and deliberately manual.
+Primary use: structured, publishable commentary.
+Secondary (often better) use: private deep dives into complex topics — even if you never publish.
 
-This is **not** a publishing tool.
+Status: Experimental personal tool. Depends on pasting the system prompt into your LLM of choice (Grok, Claude, etc.). No automation, no publishing built-in.
 
-## Quick Start
+## Quick start
 
 ```bash
-# Create a new post
-./scripts/new_post.sh "my-post-slug" "CTE"
-
-# Activate it
-./scripts/activate_post.sh my-post-slug
-
-# Start a conversation with your LLM CLI
-# The system prompt is in SYSTEM_COMPILER.md
+./scripts/new_post.sh my-topic-slug [CTE|Minto|Dialectic|FieldNotes]
+./scripts/activate_post.sh my-topic-slug
+# → paste contents of SYSTEM_COMPILER.md into your AI chat
 ```
 
-## Repository Structure
+## Features
 
-```
-LearnOutLoud/
-├── scripts/            # Workflow automation
-├── templates/          # Blank templates for post files
-├── frameworks/         # Framework definitions
-├── work/               # Active work (posts live here)
-│   └── INDEX.md        # Inventory of all posts
-├── LICENSE             # MIT License
-├── README.md
-├── SYSTEM_COMPILER.md  # LLM system prompt
-└── .gitignore
-```
+- Conversation-driven drafting
+- Built-in thinking frameworks
+- Gap tracking
+- Manual fact-check guidance (primary sources + archives only)
+- Full history via Git
 
-## Frameworks
-
-Choose one framework per post:
-
-- **CTE** (Claim-Tension-Examination) — opinionated commentary
-- **Minto Pyramid** — executive briefs, policy writing
-- **Dialectic** — philosophical exploration
-- **Field Notes** — practitioner insights
-
-See `frameworks/FRAMEWORKS.md` for details.
-
-## Workflow
-
-1. `new_post.sh` — create post folder
-2. `activate_post.sh` — set as current working post
-3. Conversational interview with LLM
-4. Review draft, run gap check
-5. Generate research plan
-6. Integrate sources
-7. Tighten structure
-8. Commit at each milestone
-
-## Commands (Natural Language)
-
-Say these to your LLM:
-- "show draft"
-- "gap check"
-- "generate research plan"
-- "what are we working on?"
-- "set status: Draft"
-- "commit it"
-
-## Design Philosophy
-
-- Structure beats inspiration
-- Uncertainty is labeled, not hidden
-- Experience counts, but must be marked as such
-- AI assists thinking; it does not replace judgment
-- If it's important, it lives in a file
-- If it's real, it gets a commit
-
-## Version
-
-v0 — scaffold-first, no magic, no nonsense
+MIT Licensed — fork and evolve freely.
