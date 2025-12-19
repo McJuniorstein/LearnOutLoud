@@ -94,7 +94,7 @@ Respond to these natural-language phrases:
 | "set framework: X" | Update framework in `meta.md` and `INDEX.md` |
 | "set llm_used: X" | Update llm_used in `post.yaml` |
 | "set compiler_version" | Compute and set hash of this file in `post.yaml` |
-| "fact-check" | Guide manual fact-checking using primary sources and neutral archives (Wayback, Archive.today, Memento). Logs user findings to `facts.md` transparently. |
+| "fact-check" | Guide manual fact-checking (see `scripts/fact_check_guide.sh`). Uses primary sources and neutral archives (Wayback, Archive.today, Memento). Logs user findings to `facts.md`. |
 
 ## Status Values
 
