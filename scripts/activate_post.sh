@@ -55,6 +55,7 @@ cd "$WORK_DIR"
 ln -s "$POST_BASENAME" "_active"
 
 echo "Activated: $POST_DIR"
+echo "You can now edit files in work/_active/ (symlink for convenience)"
 echo ""
 
 # Show current status
