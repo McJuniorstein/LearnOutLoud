@@ -1,5 +1,13 @@
 # Changelog
 
+## v1.1.0 (2025-12-23) — CLI Onboarding Triggers
+
+- Added `CLAUDE.md` with trigger system for CLI-based LLMs
+  - "learnoutloud" activates compiler mode
+  - Help trigger responds to "how do I use this" variations
+  - Guides new vs. returning users appropriately
+- Clarified README: requires CLI-based LLM with filesystem access (not web-only)
+
 ## v1.0.0 (2025-12-19) — Initial Public Release
 
 - Enforced framework sections via per-framework templates (CTE, Minto, Dialectic, FieldNotes)
