@@ -16,7 +16,7 @@ This is my personal learning rig. Rough, opinionated, and deliberately manual.
 Primary use: structured, publishable commentary.
 Secondary (often better) use: private deep dives into complex topics — even if you never publish.
 
-Status: Experimental personal tool. Depends on pasting the system prompt into your LLM of choice (Grok, Claude, etc.). No automation, no publishing built-in.
+Status: Experimental personal tool. Requires a CLI-based LLM with filesystem access (Claude Code, Cursor, Windsurf, etc.)—web-only LLMs can't write to your repo. No automation, no publishing built-in.
 
 ## Quick start
 
